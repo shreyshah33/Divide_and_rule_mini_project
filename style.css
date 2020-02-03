@@ -39,35 +39,42 @@
 .select-css option {
     font-weight: normal;
 }
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 850px;
+    height: 250px;
+}
 .grid-container-1 {
     display: grid;
     grid-template-columns: auto;
     border: 3px solid black;
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
 }
 .grid-container-2 {
     display: grid;
     grid-template-columns: auto auto;
     border: 3px solid black;
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
 }
 .grid-container-4 {
     display: grid;
     grid-template-columns: auto auto auto auto;
     border: 3px solid black;
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
 }
 .grid-container-8 {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto;
     border: 3px solid black;
-    width: 400;
-    height: 400;
+    width: 200px;
+    height: 200px;
 }
 .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 1px;
 }
