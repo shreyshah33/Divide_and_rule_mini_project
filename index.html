@@ -180,6 +180,7 @@
             var grid = document.getElementById('grids');
             var play = document.getElementById('play');
             play.style.visibility = "hidden";
+            grid.style.visibility = "hidden";
             console.log(grid.value);
             if (grid.value == 1) {
                 await changeGradient(3000, "1");
@@ -195,6 +196,7 @@
             }
             else { div.style.backgroundColor = "white"; }
             play.style.visibility = "visible";
+            grid.style.visibility = "visible";
         }
     </script>
 

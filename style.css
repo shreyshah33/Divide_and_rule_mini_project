@@ -43,7 +43,7 @@
     display: grid;
     grid-template-columns: auto auto auto auto;
     width: 850px;
-    height: 250px;
+    height: 220px;
 }
 .grid-container-1 {
     display: grid;
