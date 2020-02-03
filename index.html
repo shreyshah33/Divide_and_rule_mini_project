@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Divide and Rule</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="grid-container-1" name="grid-container-1">
+        <div id="grid-item-1"></div>
+    </div>
+    <br>
+
+    <div class="grid-container-2" name="grid-container-2">
+        <div id="grid-item-2"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+    </div>
+    <br>
+
+    <div class="grid-container-4" name="grid-container-4">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+    </div>
+    <br>
+
+    <div class="grid-container-8" name="grid-container-8">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+    </div>
+    <br>
+
+    <div id="mydiv"
+        style="background-image:linear-gradient(to right, #02c2db, #02c2db); border: 3px solid black; padding: 50px; margin: 20px; width: 100px; height: 100px;">
+    </div>
+    <div>
+        <select id="grids" class="select-css">
+            <option value="1">1x1</option>
+            <option value="2">2x2</option>
+            <option value="4">4x4</option>
+            <option value="8">8x8</option>
+        </select>
+        <br>
+        <input id="play" type="image" src="play.png" height="50px" width="auto" border="0" onclick="selected()" />
+    </div>
+    <script>
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function changeGradient(time) {
+            var div = document.getElementById('mydiv');
+            div.style.backgroundImage = "linear-gradient(to left, #02c2db 90%, red)";
+            await sleep(time);
+            div.style.backgroundImage = "linear-gradient(to left, #02c2db 80%, red)";
+            await sleep(time);
+            div.style.backgroundImage = "linear-gradient(to left, #02c2db 70%, red)";
+            await sleep(time);
+            div.style.backgroundImage = "linear-gradient(to left, #02c2db 60%, red)";
+            await sleep(time);
+            div.style.backgroundImage = "linear-gradient(to left, #02c2db 50%, red)";
+            await sleep(time);
+            div.style.backgroundImage = "linear-gradient(to left, #02c2db 40%, red)";
+            await sleep(time);
+            div.style.backgroundImage = "linear-gradient(to left, #02c2db 30%, red)";
+            await sleep(time);
+            div.style.backgroundImage = "linear-gradient(to left, #02c2db 20%, red)";
+            await sleep(time);
+            div.style.backgroundImage = "linear-gradient(to left, #02c2db 10%, red)";
+            await sleep(time);
+            div.style.backgroundImage = "linear-gradient(to left, red, red)";
+        }
+
+        async function selected() {
+            var grid = document.getElementById('grids');
+            var play = document.getElementById('play');
+            play.style.visibility = "hidden";
+            console.log(grid.value);
+            if (grid.value == 1) {
+                await changeGradient(3000);
+            }
+            else if (grid.value == 2) {
+                await changeGradient(1500)
+            }
+            else if (grid.value == 4) {
+                await changeGradient(750)
+            }
+            else if (grid.value == 8) {
+                await changeGradient(325)
+            }
+            else { div.style.backgroundColor = "white"; }
+            play.style.visibility = "visible";
+        }
+    </script>
+</body>
+
+</html>
